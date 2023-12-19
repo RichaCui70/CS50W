@@ -1,0 +1,15 @@
+a{
+    float:right;
+}
+.fixedContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49%, -50%);
+}
+#searchBox{
+    position: absolute; 
+    top: 40px; 
+    left: 50%;
+    transform: translate(-50%, -0%);
+}
