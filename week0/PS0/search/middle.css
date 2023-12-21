@@ -1,15 +1,28 @@
-a{
-    float:right;
-}
-.fixedContainer{
+#fixedContainer{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-49%, -50%);
 }
 #searchBox{
+    border-radius: 20px;
+    width: 600px;
+    height: 40px;
     position: absolute; 
-    top: 40px; 
-    left: 50%;
     transform: translate(-50%, -0%);
+}
+#searchButton{
+    position: absolute; 
+    top: 50px;
+    transform: translate(-50%, -0%);
+}
+#linkAbove{
+    position: fixed;
+    top: 1%;
+    left: 90%;
+}
+#linkUnderneath{
+    position: fixed;
+    top: 3%;
+    left: 90%;
 }

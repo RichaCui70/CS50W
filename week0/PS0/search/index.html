@@ -9,13 +9,15 @@
         <link rel="stylesheet" href="middle.css">
     </head>
     <body>
-        <div class="fixedContainer">
+        <div id="fixedContainer">
             <form action="https://google.com/search">
-                <input class="form-control" type="text" name="q">
-                <input id="searchBox" type="submit" value="Google Search">
+                <input id="searchBox" class="form-control" type="text" name="q">
+                <input id="searchButton" type="submit" value="Google Search">
             </form>
         </div>
-        <a href="imageSearch.html">Google Images</a>
-        <a href="advancedSearch.html">Advanced Search</a>
+        <div>
+            <a id="linkAbove" href="imageSearch.html">Google Images</a>
+            <a id="linkUnderneath" href="advancedSearch.html">Advanced Search</a>
+        </div>
     </body>
 </html>
