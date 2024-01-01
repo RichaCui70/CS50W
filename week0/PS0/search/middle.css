@@ -18,8 +18,7 @@
 }
 #linkAbove{
     position: fixed;
-    top: 1%;
-    left: 90%;
+    float: right
 }
 #linkUnderneath{
     position: fixed;
