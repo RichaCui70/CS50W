@@ -9,7 +9,6 @@ def index(request):
 def richard(request):
     return HttpResponse("Hello Richard!!")
 
-#
 def greet(request, name):
     return render(request, "hello/greet.html", {
         "name": name.capitalize()
