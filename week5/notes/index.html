@@ -3,20 +3,21 @@
     <head>
         <title>Hello!</title>
         <script>
-            function hello(){
-                const heading = document.querySelector('h1')
-                if (heading.innerHTML === "goodbye!"){
-                    heading.innerHTML = "hello!";
-                }else{
-                    heading.innerHTML = "goodbye!";
-                }
-            }
+            document.addEventListener('DOMContentLoaded', function(){
+                document.querySelector('form').onsubmit = function(){
+                    const name = document.querySelector('#name').value;
+                    alert(`Hello ${name}!`)
+                };
+            });
         </script>
     </head>
     <body>
         <h1>
             hello!
         </h1>
-        <button onclick="hello()">Click Here!</button>
+        <form>
+            <input autofocus id="name" placeholder="Name" type="text">
+            <input type="submit">
+        </form>
     </body>
 </html>
