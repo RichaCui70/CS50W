@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello!</title>
+        <script>
+            function hello(){
+                const heading = document.querySelector('h1')
+                if (heading.innerHTML === "goodbye!"){
+                    heading.innerHTML = "hello!";
+                }else{
+                    heading.innerHTML = "goodbye!";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>
+            hello!
+        </h1>
+        <button onclick="hello()">Click Here!</button>
+    </body>
+</html>
