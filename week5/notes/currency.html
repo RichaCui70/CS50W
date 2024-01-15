@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Currency</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelector('form').onsubmit = () => {
+                    const value = document.querySelector('#currency').value.toLowerCase();
+                    fetch('https://api.exchangeratesapi.io/latest?base=USD')
+                    .then(response => response.json())
+                    .then(data => {
+                        //const value = document.querySelector('#currency').value;
+                        console.log(value);
+                        success = data[value];
+                        if (success === undefined){
+                            document.querySelector('#result').innerHTML = "invalid currency";
+                        }else{
+                            document.querySelector('#result').innerHTML = !success;
+                        }
+                    })
+                    .catch(error => {
+                        console.log(`Error: ${error}`);
+                    });
+                    return false;
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <form>
+            <input id="currency" placeholder="currency" type="text">
+            <input type="submit" value="Convert">
+        </form>
+        <div id="result">
+
+        </div>
+    </body>
+</html>
