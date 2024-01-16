@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Animation</title>
+
+        <style>
+            @keyframes move{
+                0%{
+                    left: 0%;
+                }
+                25%{
+                    left: 50%;
+                }
+                50%{
+                    left: 75%;
+                }
+                75%{
+                    left: 50%;
+                }
+                100%{
+                    left: 90%;
+                }
+            }
+
+            h1{
+                position: relative;
+                animation-name: move;
+                animation-duration: 2s;
+                animation-fill-mode: backwards;
+                animation-iteration-count: infinite;
+            }
+
+        </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const h1 = document.querySelector('h1');
+                h1.style.animationPlayState = 'paused';
+
+                document.querySelector('button').onclick = () => {
+                    if (h1.style.animationPlayState === 'paused' ){
+                        h1.style.animationPlayState = 'running';
+                    }else{
+                        h1.style.animationPlayState = 'paused';
+                    }
+                }
+            });
+
+        </script>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <button>Button</button>
+    </body>
+</html>
