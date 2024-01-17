@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>addition</title>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+
+    <body>
+        <div id="nut"></div>
+
+        <script type="text/babel">
+
+            function App(){
+                const [state, setState] = React.useState({
+                    "num1": 1,
+                    "num2": 2,
+                    "response": ""
+                });
+
+                function Update(event){
+                    setState({
+                        ...state,
+                        response: event.target.value
+                    })
+                }
+
+                return (
+                    <div>
+                        <div>{state.num1} + {state.num2}</div>  
+                        <input onChange={Update} value={state.respone}/>  
+                    </div>
+                );
+            }
+
+            ReactDOM.render(<App />, document.querySelector("#nut"));
+
+        </script>
+
+    </body>
+</html>

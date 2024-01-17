@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <title>React</title>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/babel">
+            function Hello(props){
+                return (
+                    <h1>Hello, {props.name}</h1>
+                );
+            }
+            function App() {
+
+                const [number, numberIncrease] = React.useState(0);
+
+                function updateCount(){
+                    numberIncrease(number + 1);
+                }
+
+                return (
+                    <div>
+                        <h1>{number}</h1>
+                        <button onClick={updateCount}>count</button>
+                    </div>
+                );
+            }
+
+            ReactDOM.render(<App />, document.querySelector("#app"));
+        </script>
+    </body>
+</html>
